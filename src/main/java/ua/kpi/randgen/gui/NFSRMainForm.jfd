@@ -1,0 +1,299 @@
+JFDML JFormDesigner: "5.2.1.0.138" Java: "1.8.0_40" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			"title": "Генератор ПВДП на основі  регістрів зсуву з нелінійним зворотним зв'язком"
+			"$locationPolicy": 1
+			"font": &Font0 new java.awt.Font( "Dialog", 0, 16 )
+			"$sizePolicy": 1
+			add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
+				name: "tabbedPane"
+				"selectedIndex": 0
+				"font": #Font0
+				addEvent( new FormEvent( "javax.swing.event.ChangeListener", "stateChanged", "tabbedPaneStateChanged", true ) )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+					"$columnSpecs": "10, 381, 200, 153, 10"
+					"$rowSpecs": "15, 25, 25, 11, 187, 0, 12, 25, 11"
+					"$hGap": 10
+					"$vGap": 5
+					"$alignLeft": true
+					"$alignTop": true
+				} ) {
+					name: "functionGeneratorPanel"
+					"font": #Font0
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "registerLengthLabel"
+						"text": "Довжина зсувного регістру:"
+						"font": #Font0
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 1
+						"gridy": 1
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "registerLengthTextEdit"
+						"font": #Font0
+						"horizontalAlignment": 0
+						"text": "4"
+						addEvent( new FormEvent( "java.awt.event.FocusListener", "focusLost", "registerLengthTextEditFocusLost", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridy": 1
+						"gridx": 2
+						"gridwidth": 2
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "functionLengthLabel"
+						"text": "Довжина функції зворотного зв'язку:"
+						"font": #Font0
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 1
+						"gridy": 2
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "functionLengthTextEdit"
+						"font": #Font0
+						"horizontalAlignment": 0
+						"editable": false
+						"text": "16"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 2
+						"gridy": 2
+						"gridwidth": 2
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane1"
+						"font": #Font0
+						add( new FormComponent( "javax.swing.JTextArea" ) {
+							name: "functionTextArea"
+							"editable": false
+							"font": #Font0
+							"lineWrap": true
+						} )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 1
+						"gridy": 4
+						"gridwidth": 3
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "generateFunctionButton"
+						"text": "Згенерувати функцію"
+						"font": #Font0
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "generateFunctionActionPerformed", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 1
+						"gridy": 5
+						"gridwidth": 3
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "nonlinearityLabel"
+						"text": "Нелінійність:"
+						"font": #Font0
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 1
+						"gridy": 7
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "nonlinearityTextEdit"
+						"font": #Font0
+						"horizontalAlignment": 0
+						"editable": false
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 2
+						"gridy": 7
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "nonlinearityButton"
+						"text": "Обчислити"
+						"font": #Font0
+						"enabled": false
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "nonlinearityButtonActionPerformed", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 3
+						"gridy": 7
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": "Генерація нелінійної функції зворотного зв'язку"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+					"$columnSpecs": "10, 260, 15, 230, 220, 10"
+					"$rowSpecs": "10, 25, 25, 11, 116, 0, 29, 20, 0, 0, 10, 8"
+					"$hGap": 10
+					"$vGap": 5
+					"$alignLeft": true
+					"$alignTop": true
+				} ) {
+					name: "numberGeneratorPanel"
+					"font": #Font0
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "registerLengthLabel2"
+						"text": "Довжина зсувного регістру:"
+						"font": #Font0
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 1
+						"gridy": 1
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "registerLengthTextEdit2"
+						"font": #Font0
+						"horizontalAlignment": 0
+						"text": "4"
+						"editable": false
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridy": 1
+						"gridx": 3
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "registerLengthLabel3"
+						"text": "Зсувний регістр"
+						"font": &Font1 new java.awt.Font( "Dialog", 1, 16 )
+						"horizontalAlignment": 0
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridy": 1
+						"gridx": 4
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane2"
+						"font": #Font0
+						add( new FormComponent( "javax.swing.JTextArea" ) {
+							name: "registerTextArea"
+							"lineWrap": true
+							"font": #Font0
+							"editable": false
+						} )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 4
+						"gridy": 2
+						"gridheight": 4
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "functionLengthLabel2"
+						"text": "Довжина функції зворотного зв'язку:"
+						"font": #Font0
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 1
+						"gridy": 2
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "functionLengthTextEdit2"
+						"font": #Font0
+						"horizontalAlignment": 0
+						"editable": false
+						"text": "16"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 3
+						"gridy": 2
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "functionLabel"
+						"text": "Функція зворотного зв'язку:"
+						"font": #Font0
+						"horizontalTextPosition": 0
+						"horizontalAlignment": 0
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridy": 3
+						"gridx": 1
+						"gridwidth": 3
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane3"
+						"font": #Font0
+						add( new FormComponent( "javax.swing.JTextArea" ) {
+							name: "functionTextArea2"
+							"font": #Font0
+							"editable": false
+							"lineWrap": true
+						} )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 1
+						"gridy": 4
+						"gridwidth": 3
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "initVectorLabel"
+						"text": "Вектор ініціалізації:"
+						"font": #Font0
+						"horizontalAlignment": 0
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridy": 5
+						"gridx": 1
+						"gridwidth": 3
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "initVectorTextField"
+						"font": #Font0
+						"horizontalAlignment": 0
+						addEvent( new FormEvent( "java.awt.event.FocusListener", "focusLost", "registerLengthTextEditFocusLost", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridy": 6
+						"gridx": 1
+						"gridwidth": 3
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "registerLengthLabel4"
+						"text": "Згенерована послідовність"
+						"font": #Font1
+						"horizontalAlignment": 0
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridy": 7
+						"gridx": 4
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "generateNextNumberButton"
+						"text": "Згенерувати наступний біт"
+						"font": #Font0
+						"enabled": false
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "generateNextBitActionPerformed", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 1
+						"gridy": 8
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "generatorResetButton"
+						"text": "Reset"
+						"font": #Font0
+						"enabled": false
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "generatorResetActionPerformed", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridy": 8
+						"gridx": 2
+						"gridwidth": 2
+					} )
+					add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+						name: "scrollPane4"
+						"font": #Font0
+						add( new FormComponent( "javax.swing.JTextArea" ) {
+							name: "generatedBitTextArea"
+							"font": #Font0
+							"editable": false
+							"lineWrap": true
+						} )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 4
+						"gridy": 8
+						"gridheight": 2
+					} )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "generateAllBitsButton"
+						"text": "Згенерувати всі біти періоду"
+						"font": #Font0
+						"enabled": false
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "generateAllBitsActionPerformed", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridy": 9
+						"gridx": 1
+						"gridwidth": 3
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": "Генератор ПВДП"
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 5 )
+			"size": new java.awt.Dimension( 815, 465 )
+		} )
+	}
+}
